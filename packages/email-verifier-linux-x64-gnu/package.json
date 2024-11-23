@@ -1,0 +1,23 @@
+{
+  "name": "@everyx/email-verifier-linux-x64-gnu",
+  "version": "0.0.1",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "description": "@everyx/email-verifier shared library for linux x64 gnu",
+  "author": "everyx",
+  "license": "GPL-3.0-only",
+  "main": "libemailverifier-linux-x64-gnu.so",
+  "files": [
+    "libemailverifier-linux-x64-gnu.so"
+  ],
+  "engines": {
+    "node": ">= 12"
+  },
+  "libc": [
+    "glibc"
+  ]
+}

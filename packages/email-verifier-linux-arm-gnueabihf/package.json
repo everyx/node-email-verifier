@@ -1,0 +1,20 @@
+{
+  "name": "@everyx/email-verifier-linux-arm-gnueabihf",
+  "version": "0.0.1",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm"
+  ],
+  "description": "@everyx/email-verifier shared library for linux arm gnueabihf",
+  "author": "everyx",
+  "license": "GPL-3.0-only",
+  "main": "libemailverifier-linux-arm-gnueabihf.so",
+  "files": [
+    "libemailverifier-linux-arm-gnueabihf.so"
+  ],
+  "engines": {
+    "node": ">= 12"
+  }
+}

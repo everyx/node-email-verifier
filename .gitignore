@@ -1,0 +1,6 @@
+*.h
+*.so
+*.dylib
+*.dll
+.zig-cache
+node_modules

@@ -1,0 +1,18 @@
+{
+  "name": "@everyx/email-verifier-monorepo",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@9.7.0",
+  "scripts": {
+    "build": "pnpm build:clean && pnpm build:lib",
+    "build:lib": "node scripts/build.js",
+    "build:clean": "rm -rf packages/*/*.{h,dylib,so,dll}",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.9.2",
+    "eslint": "^9.15.0"
+  }
+}

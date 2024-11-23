@@ -1,0 +1,27 @@
+{
+  "name": "@everyx/email-verifier",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "",
+  "author": "everyx",
+  "license": "GPL-3.0-only",
+  "keywords": [],
+  "main": "index.js",
+  "files": [
+    "README.md",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "ffi-rs": "^1.1.1"
+  },
+  "optionalDependencies": {
+    "@everyx/email-verifier-linux-arm-gnueabihf": "workspace:*",
+    "@everyx/email-verifier-linux-arm64-gnu": "workspace:*",
+    "@everyx/email-verifier-linux-arm64-musl": "workspace:*",
+    "@everyx/email-verifier-linux-x64-gnu": "workspace:*",
+    "@everyx/email-verifier-linux-x64-musl": "workspace:*"
+  }
+}
