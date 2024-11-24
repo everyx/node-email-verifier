@@ -36,6 +36,15 @@ importers:
       '@everyx/email-verifier-linux-x64-musl':
         specifier: workspace:*
         version: link:../email-verifier-linux-x64-musl
+      '@everyx/email-verifier-win32-arm64-gnu':
+        specifier: workspace:*
+        version: link:../email-verifier-win32-arm64-gnu
+      '@everyx/email-verifier-win32-ia32-gnu':
+        specifier: workspace:*
+        version: link:../email-verifier-win32-ia32-gnu
+      '@everyx/email-verifier-win32-x64-gnu':
+        specifier: workspace:*
+        version: link:../email-verifier-win32-x64-gnu
 
   packages/email-verifier-linux-arm-gnueabihf: {}
 
@@ -46,6 +55,12 @@ importers:
   packages/email-verifier-linux-x64-gnu: {}
 
   packages/email-verifier-linux-x64-musl: {}
+
+  packages/email-verifier-win32-arm64-gnu: {}
+
+  packages/email-verifier-win32-ia32-gnu: {}
+
+  packages/email-verifier-win32-x64-gnu: {}
 
 packages:
 

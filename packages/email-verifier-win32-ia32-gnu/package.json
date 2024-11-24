@@ -1,0 +1,20 @@
+{
+  "name": "@everyx/email-verifier-win32-ia32-gnu",
+  "version": "0.0.1",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "ia32"
+  ],
+  "description": "@everyx/email-verifier shared library for win32 ia32 gnu",
+  "author": "everyx",
+  "license": "GPL-3.0-only",
+  "main": "libemailverifier-win32-ia32-gnu.dll",
+  "files": [
+    "libemailverifier-win32-ia32-gnu.dll"
+  ],
+  "engines": {
+    "node": ">= 12"
+  }
+}

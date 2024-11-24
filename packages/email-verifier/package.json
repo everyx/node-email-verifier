@@ -22,6 +22,9 @@
     "@everyx/email-verifier-linux-arm64-gnu": "workspace:*",
     "@everyx/email-verifier-linux-arm64-musl": "workspace:*",
     "@everyx/email-verifier-linux-x64-gnu": "workspace:*",
-    "@everyx/email-verifier-linux-x64-musl": "workspace:*"
+    "@everyx/email-verifier-linux-x64-musl": "workspace:*",
+    "@everyx/email-verifier-win32-arm64-gnu": "workspace:*",
+    "@everyx/email-verifier-win32-ia32-gnu": "workspace:*",
+    "@everyx/email-verifier-win32-x64-gnu": "workspace:*"
   }
 }
