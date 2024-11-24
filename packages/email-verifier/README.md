@@ -2,11 +2,9 @@
 
 A Node.js library for email verification without sending any emails.
 
-It's based on the Go [AfterShip/email-verifier](https://github.com/AfterShip/email-verifier)
-library and use [node-ffi-rs](https://github.com/zhangyuang/node-ffi-rs) for the FFI call.
+It's based on the Go [AfterShip/email-verifier](https://github.com/AfterShip/email-verifier) library and use [node-ffi-rs](https://github.com/zhangyuang/node-ffi-rs) for the FFI call.
 
-Currently, it only supports Linux systems and has exported two methods:
-`suggestDomain` and `verify`, with SMTP verification not enabled.
+Currently, it it only supports Linux and Windows systems, and has exported two methods: `suggestDomain` and `verify`, with SMTP verification not enabled.
 
 More information, checkout [AfterShip/email-verifier](https://github.com/AfterShip/email-verifier).
 

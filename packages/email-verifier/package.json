@@ -18,10 +18,14 @@
     "ffi-rs": "^1.1.1"
   },
   "optionalDependencies": {
+    "@everyx/email-verifier-darwin-x64": "workspace:*",
     "@everyx/email-verifier-linux-arm-gnueabihf": "workspace:*",
     "@everyx/email-verifier-linux-arm64-gnu": "workspace:*",
     "@everyx/email-verifier-linux-arm64-musl": "workspace:*",
     "@everyx/email-verifier-linux-x64-gnu": "workspace:*",
-    "@everyx/email-verifier-linux-x64-musl": "workspace:*"
+    "@everyx/email-verifier-linux-x64-musl": "workspace:*",
+    "@everyx/email-verifier-win32-arm64-msvc": "workspace:*",
+    "@everyx/email-verifier-win32-ia32-msvc": "workspace:*",
+    "@everyx/email-verifier-win32-x64-msvc": "workspace:*"
   }
 }

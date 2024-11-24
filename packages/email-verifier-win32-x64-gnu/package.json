@@ -1,0 +1,20 @@
+{
+  "name": "@everyx/email-verifier-win32-x64-gun",
+  "version": "0.0.1",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "description": "@everyx/email-verifier shared library for win32 x64 gun",
+  "author": "everyx",
+  "license": "GPL-3.0-only",
+  "main": "libemailverifier-win32-x64-gun.dll",
+  "files": [
+    "libemailverifier-win32-x64-gun.dll"
+  ],
+  "engines": {
+    "node": ">= 12"
+  }
+}
