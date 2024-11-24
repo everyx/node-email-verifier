@@ -41,8 +41,7 @@ const TARGETS = {
 }
 
 const currentFilePath = fileURLToPath(import.meta.url)
-const packagesDir = join(dirname(currentFilePath), '../packages')
-const libDir = join(packagesDir, '../lib')
+const libsDir = join(dirname(currentFilePath), '../lib')
 const hostOS = platform()
 
 function build(options) {
@@ -60,7 +59,7 @@ function build(options) {
     `go build -trimpath -ldflags="-s -w" -buildmode=c-shared -o ${distDir}/${distFile} libemailverifier.go`,
     {
       stdio: 'inherit',
-      cwd: libDir,
+      cwd: libsDir,
       env: {
         ...env,
         CGO_ENABLED: '1',
@@ -74,12 +73,12 @@ function build(options) {
 }
 
 const libPackagePrefix = 'email-verifier-'
-const options = readdirSync(packagesDir)
+const options = readdirSync(libsDir)
   .filter(file => file.startsWith(libPackagePrefix))
   .map((file) => {
     const target = file.replace(libPackagePrefix, '')
     const [os, arch, toolchain] = target.split('-')
-    return { os, arch, toolchain, distDir: join(packagesDir, file) }
+    return { os, arch, toolchain, distDir: join(libsDir, file) }
   })
 
 for (const option of options) {
