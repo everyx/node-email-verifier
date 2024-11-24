@@ -1,7 +1,8 @@
 import { spawnSync } from 'node:child_process'
 import { readdirSync, readFileSync } from 'node:fs'
+import { platform } from 'node:os'
 import { dirname, join } from 'node:path'
-import { cwd, env } from 'node:process'
+import { env } from 'node:process'
 import { fileURLToPath } from 'node:url'
 
 const TARGETS = {
@@ -39,13 +40,16 @@ const TARGETS = {
   },
 }
 
-const currentDir = cwd()
 const currentFilePath = fileURLToPath(import.meta.url)
 const packagesDir = join(dirname(currentFilePath), '../packages')
 const libDir = join(packagesDir, '../lib')
+const hostOS = platform()
 
 async function build(options) {
   const { os, arch, toolchain, distDir } = options
+
+  if (hostOS !== os)
+    return
 
   const zigTarget = `${TARGETS.arch[arch].zig}-${TARGETS.os[os].zig}${toolchain ? `-${toolchain}` : ''}`
 
@@ -65,9 +69,6 @@ async function build(options) {
         GOARCH: TARGETS.arch[arch].go,
         CC: `zig cc -target ${zigTarget}`,
         CXX: `zig c++ -target ${zigTarget}`,
-        USE_JEMALLOC: 'no',
-        USE_SYSTEMD: 'no',
-        ZIG_LOCAL_CACHE_DIR: join(currentDir, '.zig-cache'),
       },
     },
   )

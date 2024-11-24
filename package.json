@@ -5,9 +5,8 @@
   "private": true,
   "packageManager": "pnpm@9.7.0",
   "scripts": {
-    "build": "pnpm build:clean && pnpm build:lib",
-    "build:lib": "node scripts/build.js",
-    "build:clean": "rm -rf packages/*/*.{h,dylib,so,dll}",
+    "build": "pnpm build:lib",
+    "build:lib": "rm -rf packages/*/*.{h,dylib,so,dll} && node scripts/build.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
