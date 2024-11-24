@@ -1,0 +1,27 @@
+{
+  "release-as": "0.1.0",
+  "release-type": "node",
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": true,
+  "packages": {
+    "packages/email-verifier": {
+      "component": "verifier",
+      "include-component-in-tag": false
+    },
+    "lib": {
+      "release-type": "go",
+      "component": "libverifier",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "*/package.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    }
+  },
+  "plugins": [
+    "node-workspace"
+  ],
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}
