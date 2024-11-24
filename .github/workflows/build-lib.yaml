@@ -1,0 +1,48 @@
+name: Build Library
+
+on:
+  workflow_dispatch:
+    inputs:
+      os:
+        required: true
+        default: ubuntu-latest
+        type: choice
+        options:
+          - ubuntu-latest
+          - windows-latest
+
+jobs:
+  build:
+    runs-on: ${{ inputs.os }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: lib/go.mod
+          cache-dependency-path: lib/go.sum
+
+      - name: Setup Zig
+        uses: mlugg/setup-zig@v1
+
+      - name: Enable Node.js corepack
+        run: corepack enable
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Run ${{ inputs.os }} build
+        run: pnpm build:lib
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-lib-${{ inputs.os }}
+          path: |
+            packages/email-verifier-*/*.so
+            packages/email-verifier-*/*.dylib
+            packages/email-verifier-*/*.dll
