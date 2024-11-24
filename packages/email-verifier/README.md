@@ -1,8 +1,14 @@
 # `@everyx/email-verifier`
 
-Go 邮件验证库 [email-verifier](https://github.com/AfterShip/email-verifier) 的基于 [node-ffi-rs](https://github.com/zhangyuang/node-ffi-rs) 的 node 绑定库。
+A Node.js library for email verification without sending any emails.
 
-目前仅支持 Linux 系统，仅导出了 `suggestDomain` 和 `verify` 两个方法，并且未开启 SMTP 验证。
+It's based on the Go [AfterShip/email-verifier](https://github.com/AfterShip/email-verifier)
+library and use [node-ffi-rs](https://github.com/zhangyuang/node-ffi-rs) for the FFI call.
+
+Currently, it only supports Linux systems and has exported two methods:
+`suggestDomain` and `verify`, with SMTP verification not enabled.
+
+More information, checkout [AfterShip/email-verifier](https://github.com/AfterShip/email-verifier).
 
 ## Install
 
