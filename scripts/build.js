@@ -1,8 +1,8 @@
-import { spawnSync } from 'node:child_process'
+import { execSync } from 'node:child_process'
 import { readdirSync, readFileSync } from 'node:fs'
 import { platform } from 'node:os'
 import { dirname, join } from 'node:path'
-import { env } from 'node:process'
+import { env, exit } from 'node:process'
 import { fileURLToPath } from 'node:url'
 
 const TARGETS = {
@@ -45,7 +45,7 @@ const packagesDir = join(dirname(currentFilePath), '../packages')
 const libDir = join(packagesDir, '../lib')
 const hostOS = platform()
 
-async function build(options) {
+function build(options) {
   const { os, arch, toolchain, distDir } = options
 
   if (hostOS !== os)
@@ -56,9 +56,8 @@ async function build(options) {
   console.log(`-> Building ${zigTarget}`)
 
   const { main: distFile } = JSON.parse(readFileSync(join(distDir, 'package.json')))
-  await spawnSync(
-    'go',
-    ['build', '-buildmode=c-shared', '-o', `${distDir}/${distFile}`, 'libemailverifier.go'],
+  return execSync(
+    `go build -trimpath -ldflags="-s -w" -buildmode=c-shared -o ${distDir}/${distFile} libemailverifier.go`,
     {
       stdio: 'inherit',
       cwd: libDir,
@@ -75,11 +74,19 @@ async function build(options) {
 }
 
 const libPackagePrefix = 'email-verifier-'
-readdirSync(packagesDir)
+const options = readdirSync(packagesDir)
   .filter(file => file.startsWith(libPackagePrefix))
   .map((file) => {
     const target = file.replace(libPackagePrefix, '')
     const [os, arch, toolchain] = target.split('-')
     return { os, arch, toolchain, distDir: join(packagesDir, file) }
   })
-  .forEach(options => build(options))
+
+for (const option of options) {
+  try {
+    build(option)
+  }
+  catch {
+    exit(1)
+  }
+}
