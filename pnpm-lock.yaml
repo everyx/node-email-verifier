@@ -15,6 +15,22 @@ importers:
         specifier: ^9.15.0
         version: 9.15.0
 
+  lib/email-verifier-linux-arm-gnueabihf: {}
+
+  lib/email-verifier-linux-arm64-gnu: {}
+
+  lib/email-verifier-linux-arm64-musl: {}
+
+  lib/email-verifier-linux-x64-gnu: {}
+
+  lib/email-verifier-linux-x64-musl: {}
+
+  lib/email-verifier-win32-arm64-gnu: {}
+
+  lib/email-verifier-win32-ia32-gnu: {}
+
+  lib/email-verifier-win32-x64-gnu: {}
+
   packages/email-verifier:
     dependencies:
       ffi-rs:
@@ -23,44 +39,28 @@ importers:
     optionalDependencies:
       '@everyx/email-verifier-linux-arm-gnueabihf':
         specifier: workspace:*
-        version: link:../email-verifier-linux-arm-gnueabihf
+        version: link:../../lib/email-verifier-linux-arm-gnueabihf
       '@everyx/email-verifier-linux-arm64-gnu':
         specifier: workspace:*
-        version: link:../email-verifier-linux-arm64-gnu
+        version: link:../../lib/email-verifier-linux-arm64-gnu
       '@everyx/email-verifier-linux-arm64-musl':
         specifier: workspace:*
-        version: link:../email-verifier-linux-arm64-musl
+        version: link:../../lib/email-verifier-linux-arm64-musl
       '@everyx/email-verifier-linux-x64-gnu':
         specifier: workspace:*
-        version: link:../email-verifier-linux-x64-gnu
+        version: link:../../lib/email-verifier-linux-x64-gnu
       '@everyx/email-verifier-linux-x64-musl':
         specifier: workspace:*
-        version: link:../email-verifier-linux-x64-musl
+        version: link:../../lib/email-verifier-linux-x64-musl
       '@everyx/email-verifier-win32-arm64-gnu':
         specifier: workspace:*
-        version: link:../email-verifier-win32-arm64-gnu
+        version: link:../../lib/email-verifier-win32-arm64-gnu
       '@everyx/email-verifier-win32-ia32-gnu':
         specifier: workspace:*
-        version: link:../email-verifier-win32-ia32-gnu
+        version: link:../../lib/email-verifier-win32-ia32-gnu
       '@everyx/email-verifier-win32-x64-gnu':
         specifier: workspace:*
-        version: link:../email-verifier-win32-x64-gnu
-
-  packages/email-verifier-linux-arm-gnueabihf: {}
-
-  packages/email-verifier-linux-arm64-gnu: {}
-
-  packages/email-verifier-linux-arm64-musl: {}
-
-  packages/email-verifier-linux-x64-gnu: {}
-
-  packages/email-verifier-linux-x64-musl: {}
-
-  packages/email-verifier-win32-arm64-gnu: {}
-
-  packages/email-verifier-win32-ia32-gnu: {}
-
-  packages/email-verifier-win32-x64-gnu: {}
+        version: link:../../lib/email-verifier-win32-x64-gnu
 
 packages:
 
