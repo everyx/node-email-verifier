@@ -3,4 +3,5 @@
 *.dylib
 *.dll
 .zig-cache
+dist
 node_modules
