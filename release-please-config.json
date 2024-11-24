@@ -1,0 +1,59 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "release-as": "0.1.0",
+  "release-type": "node",
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": true,
+  "packages": {
+    "packages/email-verifier": {
+      "component": "verifier",
+      "include-component-in-tag": false
+    },
+    "lib": {
+      "release-type": "go",
+      "component": "libverifier",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "email-verifier-linux-arm-gnueabihf/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "email-verifier-linux-arm64-gnu/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "email-verifier-linux-arm64-musl/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "email-verifier-linux-x64-gnu/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "email-verifier-linux-x64-musl/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "email-verifier-win32-arm64-gnu/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "email-verifier-win32-ia32-gnu/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "email-verifier-win32-x64-gnu/package.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    }
+  }
+}
