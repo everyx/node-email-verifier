@@ -1,7 +1,7 @@
 {
   "name": "@everyx/email-verifier",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A Node.js library for email verification without sending any emails.",
   "author": "everyx",
   "license": "GPL-3.0-only",
