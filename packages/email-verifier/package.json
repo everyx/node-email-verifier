@@ -5,6 +5,11 @@
   "description": "A Node.js library for email verification without sending any emails.",
   "author": "everyx",
   "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/everyx/node-email-verifier",
+    "directory": "packages/email-verifier"
+  },
   "keywords": [],
   "main": "index.js",
   "files": [

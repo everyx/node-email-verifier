@@ -10,6 +10,11 @@
   "description": "@everyx/email-verifier shared library for linux arm64 gnu",
   "author": "everyx",
   "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/everyx/node-email-verifier",
+    "directory": "lib/email-verifier-linux-arm64-gnu"
+  },
   "main": "libemailverifier-linux-arm64-gnu.so",
   "files": [
     "libemailverifier-linux-arm64-gnu.so"
