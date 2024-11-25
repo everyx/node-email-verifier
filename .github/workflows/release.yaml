@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+      - 'libverifier-v*'
+
+jobs:
+  build-lib-linux:
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && startsWith(github.ref_name, 'libverifier-v')) }}
+    uses: ./.github/workflows/build-lib.yaml
+    secrets: inherit
+    with:
+      os: ubuntu-latest
+
+  build-lib-windows:
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && startsWith(github.ref_name, 'libverifier-v')) }}
+    uses: ./.github/workflows/build-lib.yaml
+    secrets: inherit
+    with:
+      os: windows-latest
+
+  publish-lib:
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && startsWith(github.ref_name, 'libverifier-v')) }}
+    needs: [build-lib-linux, build-lib-windows]
+    uses: ./.github/workflows/publish.yaml
+    secrets: inherit
+    with:
+      component: libverifier
+
+  publish:
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && !startsWith(github.ref_name, 'libverifier-v')) }}
+    uses: ./.github/workflows/publish.yaml
+    secrets: inherit
+    with:
+      component: verifier
