@@ -11,7 +11,7 @@
     "publish:verifier": "pnpm --filter='./packages/email-verifier' publish --no-git-checks --access public",
     "publish:libverifier": "pnpm --filter='./lib/*' publish --no-git-checks --access public",
     "pack:verifier": "pnpm -r --filter='./packages/email-verifier' exec pnpm pack --pack-destination=${PWD}/dist",
-    "pack:libverifier": "pnpm -r --filter='./lib/*' exec pnpm pack --pack-destination=${PWD}/dist",
+    "pack:libverifier": "bash scripts/check-lib-exist.sh && pnpm -r --filter='./lib/*' exec pnpm pack --pack-destination=${PWD}/dist",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
