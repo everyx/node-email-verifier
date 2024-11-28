@@ -4,4 +4,4 @@
 primaryBranch: master
 handleGHRelease: true
 manifest: true
-monorepoTags: true
+manifestConfig: release-please-config.json

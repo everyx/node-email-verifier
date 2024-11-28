@@ -1,4 +1,3 @@
 {
-  "packages/email-verifier": "0.1.1",
-  "lib": "0.1.1"
+  "*": "0.1.1"
 }

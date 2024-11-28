@@ -5,52 +5,56 @@
   "bump-minor-pre-major": false,
   "bump-patch-for-minor-pre-major": false,
   "packages": {
-    "packages/email-verifier": {
-      "component": "verifier",
-      "include-component-in-tag": false
-    },
-    "lib": {
-      "release-type": "go",
-      "component": "libverifier",
+    ".": {
       "extra-files": [
         {
           "type": "json",
-          "path": "email-verifier-linux-arm-gnueabihf/package.json",
+          "path": "packages/email-verifier/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "email-verifier-linux-arm64-gnu/package.json",
+          "path": "lib/email-verifier-linux-arm-gnueabihf/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "email-verifier-linux-arm64-musl/package.json",
+          "path": "lib/email-verifier-linux-arm-gnueabihf/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "email-verifier-linux-x64-gnu/package.json",
+          "path": "lib/email-verifier-linux-arm64-gnu/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "email-verifier-linux-x64-musl/package.json",
+          "path": "lib/email-verifier-linux-arm64-musl/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "email-verifier-win32-arm64-gnu/package.json",
+          "path": "lib/email-verifier-linux-x64-gnu/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "email-verifier-win32-ia32-gnu/package.json",
+          "path": "lib/email-verifier-linux-x64-musl/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "email-verifier-win32-x64-gnu/package.json",
+          "path": "lib/email-verifier-win32-arm64-gnu/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "lib/email-verifier-win32-ia32-gnu/package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "lib/email-verifier-win32-x64-gnu/package.json",
           "jsonpath": "$.version"
         }
       ]
