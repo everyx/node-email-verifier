@@ -1,8 +1,7 @@
 #
 # https://github.com/googleapis/repo-automation-bots/tree/master/packages/release-please
 
-# Release strategy
-releaseType: node
-
-# Release to GitHub
+primaryBranch: master
 handleGHRelease: true
+manifest: true
+monorepoTags: true
