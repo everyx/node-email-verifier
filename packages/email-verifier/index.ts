@@ -1,11 +1,11 @@
 import { execSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
-import { arch, platform } from 'node:os'
+import * as os from 'node:os'
 import { report } from 'node:process'
 import { fileURLToPath } from 'node:url'
 import { close, DataType, load, open } from 'ffi-rs'
 
-function isMusl() {
+function isMusl(): boolean {
   // For Node 10
   if (!report || typeof report.getReport !== 'function') {
     try {
@@ -15,17 +15,21 @@ function isMusl() {
     catch { return true }
   }
   else {
+    // @ts-expect-error
     const { glibcVersionRuntime } = report.getReport().header
     return !glibcVersionRuntime
   }
 }
+const arch = os.arch()
+const platform = os.platform()
+
 const toolchain = isMusl() ? 'musl' : arch === 'arm' ? 'gnueabihf' : 'gnu'
 const library = 'libemailverifier'
 const libraryURL = import.meta.resolve(`@everyx/email-verifier-${platform}-${arch}-${toolchain}`)
 const openLib = () => open({ library, path: fileURLToPath(libraryURL) })
 const closeLib = () => close(library)
 
-export async function verify(email) {
+export async function verify(email: string): Promise<Record<string, any>> {
   openLib()
   const result = await load({
     library, // 动态库文件的路径
@@ -44,7 +48,7 @@ export async function verify(email) {
   return data
 }
 
-export async function suggestDomain(domain) {
+export async function suggestDomain(domain: string): Promise<string> {
   openLib()
   const result = await load({
     library, // 动态库文件的路径

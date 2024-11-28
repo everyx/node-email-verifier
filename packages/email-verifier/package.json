@@ -7,17 +7,21 @@
   "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "https://github.com/everyx/node-email-verifier",
+    "url": "git+https://github.com/everyx/node-email-verifier.git",
     "directory": "packages/email-verifier"
   },
   "keywords": [],
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "README.md",
-    "index.js"
+    "dist"
   ],
   "scripts": {
-    "test": "node --test"
+    "build": "tsc",
+    "dev": "tsc -w",
+    "test": "node --test",
+    "prepack": "npm run build"
   },
   "dependencies": {
     "ffi-rs": "^1.1.1"
@@ -31,5 +35,9 @@
     "@everyx/email-verifier-win32-arm64-gnu": "workspace:*",
     "@everyx/email-verifier-win32-ia32-gnu": "workspace:*",
     "@everyx/email-verifier-win32-x64-gnu": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
   }
 }
