@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/everyx/node-email-verifier/compare/v0.1.0...v0.1.1) (2024-11-28)
+
+
+### Features
+
+* add types ([b0369f3](https://github.com/everyx/node-email-verifier/commit/b0369f3db42b8de21f945772d9558689e64465b1)), closes [#8](https://github.com/everyx/node-email-verifier/issues/8)
+
 ## 0.1.0 (2024-11-25)
 
 
