@@ -3,39 +3,32 @@ package main
 import (
 	"C"
 	"encoding/json"
-	"fmt"
 
 	emailVerifier "github.com/AfterShip/email-verifier"
 )
 
 type Result struct {
 	Data  *emailVerifier.Result `json:"data"`
-	Error error                 `json:"error"`
+	Error *string               `json:"error"`
 }
 
 //export Verify
 func Verify(e *C.char) *C.char {
 	email := C.GoString(e)
 
-	var result Result
-
 	verifier := emailVerifier.NewVerifier().EnableDomainSuggest()
+
 	ret, err := verifier.Verify(email)
+
+	result := Result{Data: ret, Error: nil}
 	if err != nil {
-		result = Result{
-			Data:  nil,
-			Error: err,
-		}
-	} else {
-		result = Result{
-			Data:  ret,
-			Error: nil,
-		}
+		errMsg := err.Error()
+		result.Error = &errMsg
 	}
 
 	bytes, err := json.Marshal(result)
 	if err != nil {
-		return C.CString(fmt.Sprintf("{error:%s}", err.Error()))
+		panic(err)
 	}
 
 	return C.CString(string(bytes))

@@ -20,7 +20,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc -w",
-    "test": "node --test",
+    "test": "vitest",
     "prepack": "npm run build"
   },
   "dependencies": {
@@ -35,9 +35,5 @@
     "@everyx/email-verifier-win32-arm64-gnu": "workspace:*",
     "@everyx/email-verifier-win32-ia32-gnu": "workspace:*",
     "@everyx/email-verifier-win32-x64-gnu": "workspace:*"
-  },
-  "devDependencies": {
-    "@types/node": "^22.10.0",
-    "typescript": "^5.7.2"
   }
 }

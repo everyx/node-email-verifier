@@ -1,17 +1,23 @@
-import assert from 'node:assert'
-import { suite, test } from 'node:test'
-import { suggestDomain, verify } from './index.js'
+import { expect, it, suite } from 'vitest'
+import { suggestDomain, verify } from './index'
 
 suite('email-verifier', () => {
-  test('verify', async () => {
+  it('verify', async () => {
     const email = 'name@example.com'
     const result = await verify(email)
-    assert.equal(result.email, email)
+    expect(result.data.email).toBe(email)
   })
 
-  test('suggestDomain', async () => {
+  it('verify-host-not-exists-error', async () => {
+    const email = 'name@xxx.cxxx'
+    const result = await verify(email)
+    expect(result.error).toBeTypeOf('string')
+    expect(result.error).length.gt(0)
+  })
+
+  it('suggestDomain', async () => {
     const domain = 'gmai.com'
     const result = await suggestDomain(domain)
-    assert.equal(result, 'gmail.com')
+    expect(result).equal('gmail.com')
   })
 })
