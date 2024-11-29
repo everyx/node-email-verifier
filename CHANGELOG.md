@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0 (2024-11-29)
+
+
+### Continuous Integration
+
+* use the same version for monorepo ([e6d14dd](https://github.com/everyx/node-email-verifier/commit/e6d14ddc05519da0b5ceb7d99b44b7e613c56506))
+
 ## [0.1.1](https://github.com/everyx/node-email-verifier/compare/v0.1.0...v0.1.1) (2024-11-28)
 
 
