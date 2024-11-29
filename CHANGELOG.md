@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0](https://github.com/everyx/node-email-verifier/compare/v0.2.0...v0.3.0) (2024-11-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* return data and error in verify
+
+### Features
+
+* return data and error in verify ([ac0380b](https://github.com/everyx/node-email-verifier/commit/ac0380bea70533958f9dc729673fd27c8454b7db))
+
+
+### Bug Fixes
+
+* **lib:** ret should return when err != nil ([ac0380b](https://github.com/everyx/node-email-verifier/commit/ac0380bea70533958f9dc729673fd27c8454b7db))
+
 ## 0.2.0 (2024-11-29)
 
 
