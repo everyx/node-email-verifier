@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/everyx/node-email-verifier/compare/v0.3.0...v0.3.1) (2024-11-29)
+
+
+### Bug Fixes
+
+* module resolve ([9184a5f](https://github.com/everyx/node-email-verifier/commit/9184a5ff5028aaeac1e24330f0d2e712f823c01c))
+
 ## [0.3.0](https://github.com/everyx/node-email-verifier/compare/v0.2.0...v0.3.0) (2024-11-29)
 
 
