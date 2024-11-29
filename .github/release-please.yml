@@ -4,4 +4,3 @@
 primaryBranch: master
 handleGHRelease: true
 manifest: true
-manifestConfig: release-please-config.json
