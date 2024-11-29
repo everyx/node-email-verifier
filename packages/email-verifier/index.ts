@@ -1,5 +1,5 @@
 import { DataType } from 'ffi-rs'
-import { loadLib } from './utils'
+import { loadLib } from './utils.js'
 
 interface VerifyResult {
   data: {

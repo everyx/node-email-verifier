@@ -1,5 +1,5 @@
 import { expect, it, suite } from 'vitest'
-import { suggestDomain, verify } from './index'
+import { suggestDomain, verify } from './index.js'
 
 suite('email-verifier', () => {
   it('verify', async () => {
