@@ -21,16 +21,19 @@ import { suggestDomain, verify } from '@everyx/email-verifier'
 
 const data = await verify('name@example.com')
 // {
-//   email: 'name@example.com',
-//   reachable: 'unknown',
-//   syntax: { username: 'name', domain: 'example.com', valid: true },
-//   smtp: null,
-//   gravatar: null,
-//   suggestion: '',
-//   disposable: false,
-//   role_account: false,
-//   free: true,
-//   has_mx_records: true
+//   data: {
+//      email: 'name@example.com',
+//      reachable: 'unknown',
+//      syntax: { username: 'name', domain: 'example.com', valid: true },
+//      smtp: null,
+//      gravatar: null,
+//      suggestion: '',
+//      disposable: false,
+//      role_account: false,
+//      free: true,
+//      has_mx_records: true
+//   },
+//   error: null
 // }
 
 const domain = await suggestDomain('gmai.com')
