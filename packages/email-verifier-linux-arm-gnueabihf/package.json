@@ -12,7 +12,7 @@
   "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "https://github.com/everyx/node-email-verifier",
+    "url": "git+https://github.com/everyx/node-email-verifier.git",
     "directory": "lib/email-verifier-linux-arm-gnueabihf"
   },
   "main": "libemailverifier-linux-arm-gnueabihf.so",

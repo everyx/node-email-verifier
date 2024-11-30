@@ -12,7 +12,7 @@
   "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "https://github.com/everyx/node-email-verifier",
+    "url": "git+https://github.com/everyx/node-email-verifier.git",
     "directory": "email-verifier-win32-ia32-gnu"
   },
   "main": "libemailverifier-win32-ia32-gnu.dll",
