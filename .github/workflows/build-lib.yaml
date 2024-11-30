@@ -49,6 +49,6 @@ jobs:
           name: build-lib-${{ inputs.os }}
           if-no-files-found: error
           path: |
-            lib/email-verifier-*/*.so
-            lib/email-verifier-*/*.dylib
-            lib/email-verifier-*/*.dll
+            packages/email-verifier-*/*.so
+            packages/email-verifier-*/*.dylib
+            packages/email-verifier-*/*.dll

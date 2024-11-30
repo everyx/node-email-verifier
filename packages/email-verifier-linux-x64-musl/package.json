@@ -24,5 +24,8 @@
   },
   "libc": [
     "musl"
-  ]
+  ],
+  "scripts": {
+    "prepack": "bash -c 'test -f libemailverifier-linux-x64-musl.so'"
+  }
 }

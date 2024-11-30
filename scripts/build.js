@@ -40,8 +40,8 @@ const TARGETS = {
   },
 }
 
-const currentFilePath = fileURLToPath(import.meta.url)
-const libsDir = join(dirname(currentFilePath), '../lib')
+const currentFilePath = dirname(fileURLToPath(import.meta.url))
+const libsDir = join(currentFilePath, '../lib')
 const hostOS = platform()
 
 function build(options) {
@@ -72,13 +72,14 @@ function build(options) {
   )
 }
 
-const libPackagePrefix = 'email-verifier-'
-const options = readdirSync(libsDir)
-  .filter(file => file.startsWith(libPackagePrefix))
+const libPackagesPrefix = 'email-verifier-'
+const libPackagesDir = join(currentFilePath, '../packages')
+const options = readdirSync(libPackagesDir)
+  .filter(file => file.startsWith(libPackagesPrefix))
   .map((file) => {
-    const target = file.replace(libPackagePrefix, '')
+    const target = file.replace(libPackagesPrefix, '')
     const [os, arch, toolchain] = target.split('-')
-    return { os, arch, toolchain, distDir: join(libsDir, file) }
+    return { os, arch, toolchain, distDir: join(libPackagesDir, file) }
   })
 
 for (const option of options) {

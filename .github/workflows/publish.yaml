@@ -41,7 +41,7 @@ jobs:
         with:
           pattern: build-lib-*
           merge-multiple: true
-          path: ./lib/
+          path: ./packages/
 
       - name: Publish to NPM
         run: |
@@ -50,9 +50,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - run: |
-          tree ./lib
-          pnpm pack:libverifier
+      - run: pnpm pack:libverifier
         if: ${{ inputs.component == 'libverifier' && github.event_name == 'workflow_dispatch' }}
 
       - uses: actions/upload-artifact@v4

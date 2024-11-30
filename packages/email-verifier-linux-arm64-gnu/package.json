@@ -24,5 +24,8 @@
   },
   "libc": [
     "glibc"
-  ]
+  ],
+  "scripts": {
+    "prepack": "bash -c 'test -f libemailverifier-linux-arm64-gnu.so'"
+  }
 }
