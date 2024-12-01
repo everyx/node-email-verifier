@@ -15,47 +15,47 @@
         },
         {
           "type": "json",
-          "path": "lib/email-verifier-linux-arm-gnueabihf/package.json",
+          "path": "packages/email-verifier-linux-arm-gnueabihf/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "lib/email-verifier-linux-arm-gnueabihf/package.json",
+          "path": "packages/email-verifier-linux-arm-gnueabihf/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "lib/email-verifier-linux-arm64-gnu/package.json",
+          "path": "packages/email-verifier-linux-arm64-gnu/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "lib/email-verifier-linux-arm64-musl/package.json",
+          "path": "packages/email-verifier-linux-arm64-musl/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "lib/email-verifier-linux-x64-gnu/package.json",
+          "path": "packages/email-verifier-linux-x64-gnu/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "lib/email-verifier-linux-x64-musl/package.json",
+          "path": "packages/email-verifier-linux-x64-musl/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "lib/email-verifier-win32-arm64-gnu/package.json",
+          "path": "packages/email-verifier-win32-arm64-gnu/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "lib/email-verifier-win32-ia32-gnu/package.json",
+          "path": "packages/email-verifier-win32-ia32-gnu/package.json",
           "jsonpath": "$.version"
         },
         {
           "type": "json",
-          "path": "lib/email-verifier-win32-x64-gnu/package.json",
+          "path": "packages/email-verifier-win32-x64-gnu/package.json",
           "jsonpath": "$.version"
         }
       ]
