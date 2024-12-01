@@ -27,12 +27,33 @@ interface VerifyResult {
   error: string
 }
 
-export async function verify(email: string): Promise<VerifyResult> {
+export async function verify(
+  email: string,
+  {
+    enableSMTPCheck = false,
+    disableCatchAllCheck = false,
+    proxy = '',
+  }: {
+    enableSMTPCheck?: boolean
+    disableCatchAllCheck?: boolean
+    proxy?: string
+  } = {},
+): Promise<VerifyResult> {
   const result = await loadLib({
     funcName: 'Verify',
     retType: DataType.String,
-    paramsType: [DataType.String],
-    paramsValue: [email],
+    paramsType: [
+      DataType.String,
+      DataType.I32,
+      DataType.I32,
+      DataType.String,
+    ],
+    paramsValue: [
+      email,
+      enableSMTPCheck ? 1 : 0,
+      disableCatchAllCheck ? 1 : 0,
+      proxy ?? '',
+    ],
   })
 
   return JSON.parse(result)

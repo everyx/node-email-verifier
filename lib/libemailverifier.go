@@ -13,10 +13,22 @@ type Result struct {
 }
 
 //export Verify
-func Verify(e *C.char) *C.char {
+func Verify(e *C.char, esc C.int, dcac C.int, p *C.char) *C.char {
 	email := C.GoString(e)
 
 	verifier := emailVerifier.NewVerifier().EnableDomainSuggest()
+
+	if int(esc) != 0 {
+		verifier.EnableSMTPCheck()
+	}
+
+	if int(dcac) != 0 {
+		verifier.DisableCatchAllCheck()
+	}
+
+	if proxy := C.GoString(p); proxy != "" {
+		verifier.Proxy(proxy)
+	}
 
 	ret, err := verifier.Verify(email)
 

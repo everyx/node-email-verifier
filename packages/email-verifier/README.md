@@ -36,6 +36,30 @@ const data = await verify('name@example.com')
 //   error: null
 // }
 
+// Enable SMTP check
+const data = await verify('name@gmail.com', { enableSMTPCheck: true })
+// {
+//   data: {
+//     email: 'name@gmail.com',
+//     reachable: 'no',
+//     syntax: { username: 'name', domain: 'gmail.com', valid: true },
+//     smtp: {
+//       host_exists: true,
+//       full_inbox: false,
+//       catch_all: false,
+//       deliverable: false,
+//       disabled: false
+//     },
+//     gravatar: null,
+//     suggestion: '',
+//     disposable: false,
+//     role_account: false,
+//     free: true,
+//     has_mx_records: true
+//   },
+//   error: null
+// }
+
 const domain = await suggestDomain('gmai.com')
 // gmail.com
 ```
