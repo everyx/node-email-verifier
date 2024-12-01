@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.2](https://github.com/everyx/node-email-verifier/compare/v0.3.1...v0.3.2) (2024-12-01)
+
+
+### Features
+
+* smtp support ([d4a73e7](https://github.com/everyx/node-email-verifier/commit/d4a73e73ad04b3bc8f904a1b8b082424d82b8de2)), closes [#15](https://github.com/everyx/node-email-verifier/issues/15)
+
+
+### Bug Fixes
+
+* lib pakcages's repository url ([5b6607b](https://github.com/everyx/node-email-verifier/commit/5b6607b73ffe27bf412cb2adc9a359ce6a67550c))
+
 ## [0.3.1](https://github.com/everyx/node-email-verifier/compare/v0.3.0...v0.3.1) (2024-11-29)
 
 
