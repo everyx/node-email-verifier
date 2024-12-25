@@ -4,7 +4,7 @@ import (
 	"C"
 	"encoding/json"
 
-	emailVerifier "github.com/AfterShip/email-verifier"
+	emailVerifier "github.com/everyx/email-verifier"
 )
 
 type Result struct {
