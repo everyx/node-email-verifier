@@ -57,10 +57,6 @@ importers:
       '@everyx/email-verifier-win32-x64-gnu':
         specifier: workspace:*
         version: link:../email-verifier-win32-x64-gnu
-    devDependencies:
-      unbuild:
-        specifier: ^3.1.0
-        version: 3.1.0(typescript@5.7.2)
 
   packages/email-verifier-linux-arm-gnueabihf: {}
 
