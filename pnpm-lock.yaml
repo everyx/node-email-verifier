@@ -30,8 +30,8 @@ importers:
   packages/email-verifier:
     dependencies:
       ffi-rs:
-        specifier: ^1.1.1
-        version: 1.1.1
+        specifier: ^1.3.0
+        version: 1.3.0
     optionalDependencies:
       '@everyx/email-verifier-linux-arm-gnueabihf':
         specifier: workspace:*
@@ -166,8 +166,16 @@ packages:
     resolution: {integrity: sha512-4A/SCr/2KLd5jrtOMFzaKjVtAei3+2r/NChoBNoZ3EyP/+GlhoaEGoWOZUmFmoITP7zOJyHIMm+DYRd8o3PvHA==}
     engines: {node: '>=6.9.0'}
 
+  '@babel/helper-string-parser@7.27.1':
+    resolution: {integrity: sha512-qMlSxKbpRlAridDExk92nSobyDdpPijUq2DW6oDnUqd0iOGxmQjyqhMIihI9+zv4LPyZdRje2cavWPbCbWm3eA==}
+    engines: {node: '>=6.9.0'}
+
   '@babel/helper-validator-identifier@7.25.9':
     resolution: {integrity: sha512-Ed61U6XJc3CVRfkERJWDz4dJwKe7iLmmJsbOGu9wSloNSFttHV0I8g6UAgb7qnK5ly5bGLPd4oXZlxCdANBOWQ==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/helper-validator-identifier@7.28.5':
+    resolution: {integrity: sha512-qSs4ifwzKJSV39ucNjsvc6WVHs6b7S03sOh2OcHF9UHfVPqWWALUsNUVzhSBiItjRZoLHx7nIarVjqKVusUZ1Q==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-validator-option@7.25.9':
@@ -180,6 +188,11 @@ packages:
 
   '@babel/parser@7.26.3':
     resolution: {integrity: sha512-WJ/CvmY8Mea8iDXo6a7RK2wbmJITT5fN3BEkRuFlxVyNx8jOKIIhmC4fSkTcPcf8JyavbBwIe6OpiCOBXt/IcA==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+
+  '@babel/parser@7.28.5':
+    resolution: {integrity: sha512-KKBU1VGYR7ORr3At5HAtUQ+TV3SzRCXmA/8OdDZiLDBIZxVyzXuztPjfLd3BV1PRAQGCMWWSHYhL0F8d5uHBDQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -197,6 +210,10 @@ packages:
 
   '@babel/types@7.26.3':
     resolution: {integrity: sha512-vN5p+1kl59GVKMvTHt55NzzmYVxprfJD+ql7U9NFIfKCBkYE55LYtS+WtPlaYOyzydrKI8Nezd+aZextrd+FMA==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/types@7.28.5':
+    resolution: {integrity: sha512-qQ5m48eI/MFLQ5PxQj4PFaprjyCTLI37ElWMmNs0K8Lk3dVeOdNpB3ks8jc7yM5CDmVC73eMVk/trk3fgmrUpA==}
     engines: {node: '>=6.9.0'}
 
   '@clack/core@0.4.0':
@@ -585,6 +602,9 @@ packages:
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
 
+  '@jridgewell/sourcemap-codec@1.5.5':
+    resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
+
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
@@ -897,62 +917,68 @@ packages:
   '@vue/shared@3.5.13':
     resolution: {integrity: sha512-/hnE/qP5ZoGpol0a5mDi45bOd7t3tjYJBjsgCsivow7D48cJeV5l05RD82lPqi7gRiphZM37rnhW1l6ZoCNNnQ==}
 
-  '@yuuang/ffi-rs-darwin-arm64@1.1.1':
-    resolution: {integrity: sha512-WtsJFO6TBglbOetiNEkuXfXEf957XYUlrB9iNm4fk6quixhIS6YGdCoSzsPghEbH8DlEkXzkCopkW5sCpyDsCw==}
+  '@yuuang/ffi-rs-android-arm64@1.3.0':
+    resolution: {integrity: sha512-1kO6gmoDwZVlEzqbWXkQke8WLGAECOAAjTNBjphPN1sn+ICdUGBfR7TKHMbygspGXpFUFFI7/H75l3Gt8QsaLQ==}
+    engines: {node: '>= 12'}
+    cpu: [arm64]
+    os: [android]
+
+  '@yuuang/ffi-rs-darwin-arm64@1.3.0':
+    resolution: {integrity: sha512-JJOG1MXNV04FN0SWNUSK1i3LJVn76XF15+OcRYl0bWgjYnfsBzXzeIQdAp3wIlDTPPQQ+Z3Fxbb+b7wuf7uIDA==}
     engines: {node: '>= 12'}
     cpu: [arm64]
     os: [darwin]
 
-  '@yuuang/ffi-rs-darwin-x64@1.1.1':
-    resolution: {integrity: sha512-zYRg+GvDJdZLJSjd3PpvGUZ7Zu1TVtl0Lcbr373SQ5loxlEXCAT38HPKoewaWmPfJNDfdHPikmXJFND9qeGjrg==}
+  '@yuuang/ffi-rs-darwin-x64@1.3.0':
+    resolution: {integrity: sha512-YAagzuM6LNqbcFhXMfUFmTT0F+RD6qV59Qe7L20mb5Xf9luipieqs2fEUVU+MAkgXk1gXRj7HczWkI97+qa3Mg==}
     engines: {node: '>= 12'}
     cpu: [x64]
     os: [darwin]
 
-  '@yuuang/ffi-rs-linux-arm-gnueabihf@1.1.1':
-    resolution: {integrity: sha512-aSIX8f5MVVoUnc+j1Al2KhbZx1crQVDYVLGtkjLQgV6iWbaH/o6sXGdqo0Jz33b0+GxgUxDCjZMCC7uMvnmnbg==}
+  '@yuuang/ffi-rs-linux-arm-gnueabihf@1.3.0':
+    resolution: {integrity: sha512-RZOU9PcYpaE920dDoDSEL+UQ19CU9MEf9Gm3kKSpb161TPeKzqMZPUEMpbRaww18pPBN1aWbe2BHiyKAO6tTcg==}
     engines: {node: '>= 12'}
     cpu: [arm]
     os: [linux]
 
-  '@yuuang/ffi-rs-linux-arm64-gnu@1.1.1':
-    resolution: {integrity: sha512-npICoIE+CYhGpp72BKxj5KC4O6g1WuAetljPB0TFp+zdBIJQLxxWPzTLPg3RumlEpoZ63J59QTEgmIAvsQ/N5g==}
+  '@yuuang/ffi-rs-linux-arm64-gnu@1.3.0':
+    resolution: {integrity: sha512-US8XxQUja+dK4WTZWy9RD2/N/c4bLpFoH7sNYO+ENEpmfMbrB7Nw2bKvCk/I0OptuV4P3pScRgDD5xk4ztXgEA==}
     engines: {node: '>= 12'}
     cpu: [arm64]
     os: [linux]
 
-  '@yuuang/ffi-rs-linux-arm64-musl@1.1.1':
-    resolution: {integrity: sha512-J4V1ra9lVYp3bE7KIgCKUeXhrymrvePOX4qURd4dsF0VQQu9SPiE7rDj0l6H4LRfpTDSq1HnbWn2R9ZaHN5YSg==}
+  '@yuuang/ffi-rs-linux-arm64-musl@1.3.0':
+    resolution: {integrity: sha512-DQ++kgJ6hks90wnDoY3PSkoxX2DmNI4e/H/gKFLKoOm+3K++se/ZyONwlVvDmOWKt2yTt6SyrxoIO7atr5LQmQ==}
     engines: {node: '>= 12'}
     cpu: [arm64]
     os: [linux]
 
-  '@yuuang/ffi-rs-linux-x64-gnu@1.1.1':
-    resolution: {integrity: sha512-wQ6QV6At7FcAia/6amvAODHyRLVlKAbTs61w6RxD7k84TTgRyD4QJsINgdGYISXG2peilrMXqALlm2w7cKcllQ==}
+  '@yuuang/ffi-rs-linux-x64-gnu@1.3.0':
+    resolution: {integrity: sha512-HTk+RUDozycipfL97TsmVhZpJKK3ciTY4gIC6Wlg9dFpwcCscUVH5B6DKctbV/KmCV7r3FMB2eJxQBuLRH1JFg==}
     engines: {node: '>= 12'}
     cpu: [x64]
     os: [linux]
 
-  '@yuuang/ffi-rs-linux-x64-musl@1.1.1':
-    resolution: {integrity: sha512-JQITz02Oz1RLpXzofqT1DOWyVR+uyADftp+s2+Kiq6CZXSPyxOiHY40QBugUrby6vYH0qCADUzjpX5aLDkZHag==}
+  '@yuuang/ffi-rs-linux-x64-musl@1.3.0':
+    resolution: {integrity: sha512-qpcPQW2AIeuS/CCBZhKEI07JxfoVulFQUHjsx6rhoAC5SVb2V+wcf8X5CkIvwhiRzydelw/uRml5vY0z+ieh1w==}
     engines: {node: '>= 12'}
     cpu: [x64]
     os: [linux]
 
-  '@yuuang/ffi-rs-win32-arm64-msvc@1.1.1':
-    resolution: {integrity: sha512-sqA3tM9g/kH0T86iNYD8imMaskCaFCeW7K+Dr/3Mm6atkvVOcg94n8lHq54MU5wWOwKBgIfGtmVyQetUEhOO0Q==}
+  '@yuuang/ffi-rs-win32-arm64-msvc@1.3.0':
+    resolution: {integrity: sha512-Dflhd43LH4Y4pcWp3opozPp0b+8xAvxWq8ZyIWf/HhTMYIvWWjBoGo3LvLgzx8R2CdELKMO17dni76qCgJfv1A==}
     engines: {node: '>= 12'}
     cpu: [arm64]
     os: [win32]
 
-  '@yuuang/ffi-rs-win32-ia32-msvc@1.1.1':
-    resolution: {integrity: sha512-yze+xpuaeFWDeGyHoV9e/EJuoLq7JHVYgYS26j/QtbBUg8nDSrq3F4kO2ymFGYqDJhy69zBojbCLGN+eOHrFcA==}
+  '@yuuang/ffi-rs-win32-ia32-msvc@1.3.0':
+    resolution: {integrity: sha512-auc7WR0fKArxxt2m9HaHWrgJMlkwVg94+AN5TGGwT0RIAJTfc7juExXHwpRcWifDTykooXyGvJdTY351L1BVww==}
     engines: {node: '>= 12'}
     cpu: [x64, ia32]
     os: [win32]
 
-  '@yuuang/ffi-rs-win32-x64-msvc@1.1.1':
-    resolution: {integrity: sha512-nUsy7tocOGsMVGUei/MwjT4FdUJRuipiQAuV2sMjFxb3UT9rZsph7mAryggW+TSqhzCc4tkpyEKZtlqslpTh8Q==}
+  '@yuuang/ffi-rs-win32-x64-msvc@1.3.0':
+    resolution: {integrity: sha512-GL9q9cyuZXkNomr3DmkwSaTKpRInY8y4efcCLvv8J4oiIRkrUzKUQ9//l26uqGmPGYGtSJ5rjLBX9uDmkhhZjQ==}
     engines: {node: '>= 12'}
     cpu: [x64]
     os: [win32]
@@ -1494,8 +1520,8 @@ packages:
       picomatch:
         optional: true
 
-  ffi-rs@1.1.1:
-    resolution: {integrity: sha512-9291xUexLwtBU/NOorDFa7h2iepnQL1mcpG+DpvnL1U8Wa1Lz/bt2/R35rEn9vSPp/YbeaG6lUM3eRZSAwS2Jw==}
+  ffi-rs@1.3.0:
+    resolution: {integrity: sha512-xdyaooHKShKvNZE9X7PDn4KdNtZaX8cPPJkIqwsx2b7u4UFk6m1VdzsmCSc6eQDFCbk7LyygU1VDl9VRbmPXEg==}
 
   file-entry-cache@8.0.0:
     resolution: {integrity: sha512-XXTUwCvisa5oacNGRP9SfNtYBNAMi+RPwBFmblZEF7N7swHYQS6/Zfk7SRwx4D5j3CH211YNRco1DEMNVfZCnQ==}
@@ -1747,6 +1773,9 @@ packages:
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
+  magic-string@0.30.21:
+    resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
+
   markdown-table@3.0.4:
     resolution: {integrity: sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==}
 
@@ -1915,6 +1944,11 @@ packages:
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
+
+  nanoid@3.3.11:
+    resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
 
   nanoid@3.3.8:
     resolution: {integrity: sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==}
@@ -2201,6 +2235,10 @@ packages:
 
   postcss@8.4.49:
     resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
+    engines: {node: ^10 || ^12 || >=14}
+
+  postcss@8.5.6:
+    resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -2737,7 +2775,11 @@ snapshots:
 
   '@babel/helper-string-parser@7.25.9': {}
 
+  '@babel/helper-string-parser@7.27.1': {}
+
   '@babel/helper-validator-identifier@7.25.9': {}
+
+  '@babel/helper-validator-identifier@7.28.5': {}
 
   '@babel/helper-validator-option@7.25.9': {}
 
@@ -2749,6 +2791,10 @@ snapshots:
   '@babel/parser@7.26.3':
     dependencies:
       '@babel/types': 7.26.3
+
+  '@babel/parser@7.28.5':
+    dependencies:
+      '@babel/types': 7.28.5
 
   '@babel/standalone@7.26.4': {}
 
@@ -2774,6 +2820,11 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
+
+  '@babel/types@7.28.5':
+    dependencies:
+      '@babel/helper-string-parser': 7.27.1
+      '@babel/helper-validator-identifier': 7.28.5
 
   '@clack/core@0.4.0':
     dependencies:
@@ -3018,6 +3069,8 @@ snapshots:
   '@jridgewell/set-array@1.2.1': {}
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
+
+  '@jridgewell/sourcemap-codec@1.5.5': {}
 
   '@jridgewell/trace-mapping@0.3.25':
     dependencies:
@@ -3309,7 +3362,7 @@ snapshots:
 
   '@vue/compiler-core@3.5.13':
     dependencies:
-      '@babel/parser': 7.26.3
+      '@babel/parser': 7.28.5
       '@vue/shared': 3.5.13
       entities: 4.5.0
       estree-walker: 2.0.2
@@ -3322,14 +3375,14 @@ snapshots:
 
   '@vue/compiler-sfc@3.5.13':
     dependencies:
-      '@babel/parser': 7.26.3
+      '@babel/parser': 7.28.5
       '@vue/compiler-core': 3.5.13
       '@vue/compiler-dom': 3.5.13
       '@vue/compiler-ssr': 3.5.13
       '@vue/shared': 3.5.13
       estree-walker: 2.0.2
-      magic-string: 0.30.17
-      postcss: 8.4.49
+      magic-string: 0.30.21
+      postcss: 8.5.6
       source-map-js: 1.2.1
 
   '@vue/compiler-ssr@3.5.13':
@@ -3339,34 +3392,37 @@ snapshots:
 
   '@vue/shared@3.5.13': {}
 
-  '@yuuang/ffi-rs-darwin-arm64@1.1.1':
+  '@yuuang/ffi-rs-android-arm64@1.3.0':
     optional: true
 
-  '@yuuang/ffi-rs-darwin-x64@1.1.1':
+  '@yuuang/ffi-rs-darwin-arm64@1.3.0':
     optional: true
 
-  '@yuuang/ffi-rs-linux-arm-gnueabihf@1.1.1':
+  '@yuuang/ffi-rs-darwin-x64@1.3.0':
     optional: true
 
-  '@yuuang/ffi-rs-linux-arm64-gnu@1.1.1':
+  '@yuuang/ffi-rs-linux-arm-gnueabihf@1.3.0':
     optional: true
 
-  '@yuuang/ffi-rs-linux-arm64-musl@1.1.1':
+  '@yuuang/ffi-rs-linux-arm64-gnu@1.3.0':
     optional: true
 
-  '@yuuang/ffi-rs-linux-x64-gnu@1.1.1':
+  '@yuuang/ffi-rs-linux-arm64-musl@1.3.0':
     optional: true
 
-  '@yuuang/ffi-rs-linux-x64-musl@1.1.1':
+  '@yuuang/ffi-rs-linux-x64-gnu@1.3.0':
     optional: true
 
-  '@yuuang/ffi-rs-win32-arm64-msvc@1.1.1':
+  '@yuuang/ffi-rs-linux-x64-musl@1.3.0':
     optional: true
 
-  '@yuuang/ffi-rs-win32-ia32-msvc@1.1.1':
+  '@yuuang/ffi-rs-win32-arm64-msvc@1.3.0':
     optional: true
 
-  '@yuuang/ffi-rs-win32-x64-msvc@1.1.1':
+  '@yuuang/ffi-rs-win32-ia32-msvc@1.3.0':
+    optional: true
+
+  '@yuuang/ffi-rs-win32-x64-msvc@1.3.0':
     optional: true
 
   acorn-jsx@5.3.2(acorn@8.14.0):
@@ -4036,18 +4092,19 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.2
 
-  ffi-rs@1.1.1:
+  ffi-rs@1.3.0:
     optionalDependencies:
-      '@yuuang/ffi-rs-darwin-arm64': 1.1.1
-      '@yuuang/ffi-rs-darwin-x64': 1.1.1
-      '@yuuang/ffi-rs-linux-arm-gnueabihf': 1.1.1
-      '@yuuang/ffi-rs-linux-arm64-gnu': 1.1.1
-      '@yuuang/ffi-rs-linux-arm64-musl': 1.1.1
-      '@yuuang/ffi-rs-linux-x64-gnu': 1.1.1
-      '@yuuang/ffi-rs-linux-x64-musl': 1.1.1
-      '@yuuang/ffi-rs-win32-arm64-msvc': 1.1.1
-      '@yuuang/ffi-rs-win32-ia32-msvc': 1.1.1
-      '@yuuang/ffi-rs-win32-x64-msvc': 1.1.1
+      '@yuuang/ffi-rs-android-arm64': 1.3.0
+      '@yuuang/ffi-rs-darwin-arm64': 1.3.0
+      '@yuuang/ffi-rs-darwin-x64': 1.3.0
+      '@yuuang/ffi-rs-linux-arm-gnueabihf': 1.3.0
+      '@yuuang/ffi-rs-linux-arm64-gnu': 1.3.0
+      '@yuuang/ffi-rs-linux-arm64-musl': 1.3.0
+      '@yuuang/ffi-rs-linux-x64-gnu': 1.3.0
+      '@yuuang/ffi-rs-linux-x64-musl': 1.3.0
+      '@yuuang/ffi-rs-win32-arm64-msvc': 1.3.0
+      '@yuuang/ffi-rs-win32-ia32-msvc': 1.3.0
+      '@yuuang/ffi-rs-win32-x64-msvc': 1.3.0
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -4246,6 +4303,10 @@ snapshots:
   magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  magic-string@0.30.21:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.5
 
   markdown-table@3.0.4: {}
 
@@ -4590,6 +4651,8 @@ snapshots:
 
   ms@2.1.3: {}
 
+  nanoid@3.3.11: {}
+
   nanoid@3.3.8: {}
 
   natural-compare@1.4.0: {}
@@ -4851,6 +4914,12 @@ snapshots:
   postcss@8.4.49:
     dependencies:
       nanoid: 3.3.8
+      picocolors: 1.1.1
+      source-map-js: 1.2.1
+
+  postcss@8.5.6:
+    dependencies:
+      nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
 

@@ -39,7 +39,6 @@ export async function loadLib<
   const result = await load({
     library,
     runInNewThread: true,
-    freeResultMemory: true,
     ...params,
   })
 
