@@ -30,7 +30,7 @@ jobs:
           cache-dependency-path: lib/go.sum
 
       - name: Setup Zig
-        uses: mlugg/setup-zig@v1
+        uses: mlugg/setup-zig@v2
 
       - name: Enable Node.js corepack
         run: corepack enable
